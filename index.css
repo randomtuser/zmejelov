@@ -1,0 +1,393 @@
+body {
+  background-color: hsl(270, 11%, 36%);
+  font-size: 25px;
+  margin: 0
+}
+
+
+@keyframes animationIntro {
+    0%   { left:  1%;}
+    5%   { left: 2%;}
+    10%   { left: 3%  }
+    15%  { left:  4% }
+    20%  { left:  5%}
+    25%  { left:  6% }
+    30%   { left: 7%  }
+    35%   { left:  8% }
+    40%   { left:   9%}
+    45%  { left:  10%}
+    50%  { left:  11%}
+    55%  { left:  12%  }
+    60%  { left:  13% }
+    65%  { left:   14%}
+    70%   { left:15%;  }
+    75%   { left:  16%;  }
+    80%   { left: 17%;  }
+    85%  { left:  18% }
+    90%  { left:  17% }
+    95%  { left:  16%  }
+    100%  { left: 15% ;  }    
+  
+  }
+
+
+
+#introductionTextDivFrontPage{
+  margin: 0% 2% 2% 20%;
+  overflow: hidden; 
+
+}
+
+
+
+
+.introduction, .introductionDivFrontPage{
+  color:  black;
+  font-size: 20px;
+  display: flex;  
+  margin: 10% 0% 8% 0%;
+
+}
+
+.introduction{
+  margin: 0% 0% 20% 0%;
+  display: flex; 
+}
+
+#options{
+  margin-top: -20px;
+  list-style-type: circle;;
+  margin-left: 30px;
+}
+
+.introductionText{
+  color:  black;
+  font-size: 30px;
+  margin-top: 2%;
+  margin-right: 2%;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+@keyframes fade {
+  from {opacity: .7} 
+  to {opacity: 1}
+}
+
+
+#about_proyect{
+  margin: 4%;
+  font-size: 30px;
+}
+
+.pictureSlider img{
+  max-width: 80%;
+  display: block; /* Ensures the image is treated as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+
+#introduction_FrontPage{
+  display: flex;  
+}
+#introduction_OG{
+  margin: -5% 0% 5% 0%;
+}
+
+b, h1{
+  color: #4d1451;
+}
+
+.QnA{
+  display: center;
+  margin: 5% 0% 5% 0%;
+  text-align: center;
+
+}
+.question{
+  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: hsl(270, 7%, 32%);
+  padding: 2%;
+}
+
+.answer{
+  font-size: 25px;
+
+}
+
+a{
+  text-decoration: none;
+  color: #4d1451;
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+}
+
+
+#zmejaIntro{
+  scale: 1.5;
+}
+
+#animationIntro {
+    position: relative; 
+    animation-name: animationIntro;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+
+
+
+
+
+#addCommentZmejelov{
+  width: 70%;
+  height: 50%;
+  border: none;
+  background-color: #5e5765;
+  resize: none;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+
+
+.submitButtonClass{
+  margin: 1%  0%  1%  0%;
+
+}
+
+.submitCommentButton{
+  background-color: #4d1451;
+  border:none;
+  padding: 1% 2% 1% 2%;
+  border-radius: 10px 15px ;
+  cursor: pointer;
+  color: black ;
+  font-size:  25PX;
+  text-align: center; 
+  text-decoration: none;
+  margin: 1% 0% 2% 0%;
+}
+
+.submitCommentButton:hover{
+  background-color: hsl(300, 100%, 30%);
+  transition:0.5s
+}
+.submitCommentButton:active{
+  background-color: hsl(300, 100%, 25%);
+  transition:0.5s
+}
+
+
+
+
+
+.commentAuthor{
+  display: block;
+  background-color: hsl(270, 7%, 32%);
+  padding: 1%  1% 1% 1%;
+  width: 70%;
+  text-align: left;
+  justify-content: center; 
+  align-items: center; 
+  margin: auto;
+
+}
+
+
+.commentText{
+  display: block;
+  background-color: hsl(270, 7%, 37%);
+  padding: 0%  1% 1% 1%;
+  width: 70%;
+  text-align: left;
+  justify-content: center; 
+  align-items: center; 
+  margin: auto;
+}
+
+
+
+
+
+.zmeja {
+  padding: 5%;
+  padding-right: 2%;
+}
+
+.zmeja img {
+  display: block; 
+}
+
+
+
+
+
+.gameContainerError{
+  display: center;
+  margin: 10%;
+  border: 2px solid red;
+  text-align: center;
+
+}
+
+
+.commentsForm, .commentsFormError, .commentsZmejelov{
+  display: center;
+  text-align: center;
+  
+}
+
+
+
+
+.oneAchievements img {
+  width: auto;
+  height: 100px;
+  max-width: 100%;
+}
+
+.comments_DIV{
+  background-color: hsl(270, 11%, 36%);
+  margin: 2% 0% 0% 0%;
+
+}
+
+
+#textIntroAnimation {
+  font-size: 25px;
+}
+#welcome{
+  font-size: 30px;
+}
+
+#thisIsZmejelov{
+  font-size: 45px;
+  font-weight: bold;
+}
+
+
+
+#welcome, #thisIsZmejelov{
+  color:#761E85;
+  text-align: center;
+}
+
+
+.achievements {
+  border: 2px solid yellow;
+  padding: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+   
+}
+.achievementsMainBlock{
+  display: grid;
+  text-align: center;
+  margin: 0% 0% 5% 0%;
+}
+.oneAchievements{
+  border: 2px solid     black;
+  display: relative;
+  vertical-align: top; 
+  position: relative;
+  padding: 2%;
+  border-radius: 5px;
+  height: 300px;
+  width: 600px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+
+
+
+
+.game,.achievementsMainBlock{
+  background-color: hsl(270, 11%, 30%);
+    padding: 2% 0% 5% 0%;
+  margin: 0%;
+}
+
+
+
+
+
+/*p {
+  animation: animated-text 4s steps(40,end) 1s 1 normal both,
+             animated-cursor 600ms steps(40,end) infinite;
+}
+
+p: nth-child(2)
+{
+    white-space:nowrap;
+    overflow:hidden;    
+   animation: animated-text2 4s steps(29,end) 1s 1 normal both;
+    -webkit-animation-delay: 5s; 
+    animation-delay: 5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/* text animation */
+
+/*@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+@keyframes animated-text2{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+/* cursor animations */
+
+/*@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
+}
+*/
+
+#enterTheWorld{
+  background-color: hsl(300, 100%, 25%);
+    border:none;
+    margin: 1% auto;
+    padding: 2.5% 5% 2.5% 5%;
+    border-radius: 10px 15px ;
+    cursor: pointer;
+    color: white ;
+    font-size:  25PX;
+    display: block; /* Ensure it's a block element for margin auto to work */
+    text-align: center; 
+    text-decoration: none;
+  }
+
+#enterTheWorld a {
+    color: white;
+}
+
+
+
+
+.achievementsNotLoggedIn {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  border: 2px solid black;
+  margin: 0 auto 2% auto;
+  padding: 10px;
+  height: 100px;
+  width: 600px;
+  text-align: center;
+}
