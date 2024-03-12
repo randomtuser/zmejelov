@@ -17,23 +17,23 @@
   gtag('config', 'G-TH6M7HMG59');   
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="CSS/index.css">
 
 
  <meta charset="utf-8"/>
      <title>Zmejelov</title>
 
     <script type="text/javascript" src = "Zmejelov_basic_game/phaser.min.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_OG/scena2.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_OG/scena1.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_OG/uvod.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_OG/scena6.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_OG/scena3.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_OG/scena4.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_OG/scena5.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_OG/konec.js"></script>
+    <script type="text/javascript"src = "zmejelov_OG/scena2.js"></script>
+    <script type="text/javascript"src = "zmejelov_OG/scena1.js"></script>
+    <script type="text/javascript"src = "zmejelov_OG/uvod.js"></script>
+    <script type="text/javascript"src = "zmejelov_OG/scena6.js"></script>
+    <script type="text/javascript"src = "zmejelov_OG/scena3.js"></script>
+    <script type="text/javascript"src = "zmejelov_OG/scena4.js"></script>
+    <script type="text/javascript"src = "zmejelov_OG/scena5.js"></script>
+    <script type="text/javascript"src = "zmejelov_OG/konec.js"></script>
 
-    <script type="text/javascript"src = "ZMEJELOV_OG/game.js"></script>
+    <script type="text/javascript"src = "zmejelov_OG/game.js"></script>
 
     <link rel="preload" as="font" href="assets\uvod\Cinzel-Regular.ttf" type="font/ttf" />
 
@@ -51,11 +51,12 @@
 
       });
     </script>
-    <h1>ZMEJELOV 1960</h1>
+
     <div  class="introduction" id="introduction_OG" >
       <img src="assets/lvl2/Wraith_03_Idle_006.png" alt="Zmeja" class="zmeja" class="col-10">
       <div class="introductionText" >
-        <p><b>ZMEJELOV 1960</b> je prvotna verzija aplikacije zasnovana v davnem 2021 letu. Danes je na voljo v svoji originali formi, 
+        <h1>zmejelov 1960</h1>
+        <p><b>zmejelov 1960</b> je prvotna verzija aplikacije zasnovana v davnem 2021 letu. Danes je na voljo v svoji originali formi, 
         edina dodana stvar k igri je en dosežek, ki ga lahko dosežeš. Kljub temu, da je igra za izkušene igralce zelo hitra in enostavna, lahko na 
         začetku novim igralcem ponuja malo preglavic, tako da, v primeru težav, ne obupati z igranjem. Igra je primerna tudi za vse "OG", ki želijo podoživeti
         nostalgijo igranja prvotne verzije!</p>
@@ -66,11 +67,12 @@
     <div class="game">
       <div id="game_OG">
         <?php if(isset($_SESSION["username"])): ?>
+          <h1>IGRA</h1>
           <div id="gameContainer"></div>
         <?php else: ?>
           <div class="gameContainerError" class="col-10">
-              <p>Za igranje se <a href="SERVER\login.php">prijavite</a> ali pa <a href="SERVER\register.php">registrirajte</a> </p>
-          </div>
+              <p>Za igranje se <a href="SERVER\login.php">prijavite</a> ali pa <a href="SERVER\register.php">registrirajte</a> </p> 
+            </div>
       <?php endif; ?>
       </div>
     </div>

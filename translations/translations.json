@@ -1,0 +1,26 @@
+{
+  "en": {
+    "zmejelov_intro_OG": "is an upgraded version of the original game that comes with a story. For beginners, the game is quite difficult, so quite a lot of help is implemented. The game automatically saves your progress, so you can pause at any time and continue when you feel like challenging yourself again.",
+    "please_login": "To play, please <a href='SERVER\\login.php'>log in</a> or <a href='SERVER\\register.php'>register</a>."
+
+  },
+  "slo": {
+    "zmejelov_intro_OG": "Je nadgrajena različica prvotne igre, ki je predstavljena z zgodbo. Za začetnike je igra kar težavna, tako da je implementiranih kar nekaj pomoči. Igra avtomatsko shranjuje napredek, tako da lahko kadarkoli prekineš in nadaljuješ, ko se ti ponovno pojavi želja po izzivih.",
+    "please_login": "Za igranje se <a href='SERVER\\login.php'>prijavite</a> ali pa <a href='SERVER\\register.php'>registrirajte</a>.",
+    "q1_OG": "Kako shranim napredek igre?",
+    "q2_OG": "KAJ NAREDITI, ČE IGRICA ZAGLIČA?",
+    "q3_OG": "Zakaj se ob smrti ponovno pojavim na 4 nivoju?",
+    "q4_OG": "KAKO ODKLENEM DOSEŽKE?",
+    "a1_OG": "Napredek igre se shrani avtomatsko na vsakem nivoju GLEJ DA TO TUD IMPLEMENTIRAS?",
+    "a2_OG": "Ponovno naloži stran, v kolikor pa se težava pojava me kontaktiraj <a href='SHARED\\contact.php'>preko obrazca</a>?",
+    "a3_OG": "Ker si umrl in kje so mrtvi ljudje? Na pokopališču! Šalo na stran, tam se pojavič, ker igraš na težki težavnosti, in ker nisi odkril skrivnega nivoja, ki ti omogoča uporabo 'checkpoint'",
+    "a4_OG": "Preberi <a href='#dosezki_OG'>dosežke</a>",
+    "please_login_achivements": "Za odklenitev dosežkov se <a href='SERVER\\login.php'>prijavite</a> ali pa <a href='SERVER\register.php'>registrirajte</a>    </a>"
+
+
+  }
+
+}
+
+
+

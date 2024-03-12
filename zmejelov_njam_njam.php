@@ -23,14 +23,14 @@
  <meta charset="utf-8"/>
      <title>Zmejelov</title>
     <script type="text/javascript" src = "Zmejelov_basic_game/phaser.min.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_njam_njam/F0_shared.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_njam_njam/F2_inicial.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_njam_njam/F3_storyIntro.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_njam_njam/F4_gamePlayStart.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_njam_njam/F5_konec.js"></script>
+    <script type="text/javascript"src = "zmejelov_njam_njam/F0_shared.js"></script>
+    <script type="text/javascript"src = "zmejelov_njam_njam/F2_inicial.js"></script>
+    <script type="text/javascript"src = "zmejelov_njam_njam/F3_storyIntro.js"></script>
+    <script type="text/javascript"src = "zmejelov_njam_njam/F4_gamePlayStart.js"></script>
+    <script type="text/javascript"src = "zmejelov_njam_njam/F5_konec.js"></script>
 
     
-    <script type="text/javascript"src = "ZMEJELOV_njam_njam/F1_game.js"></script>
+    <script type="text/javascript"src = "zmejelov_njam_njam/F1_game.js"></script>
     <link rel="preload" as="font" href="assets\uvod\Cinzel-Regular.ttf" type="font/ttf" />
   </head>
   <body>
@@ -45,7 +45,7 @@
     </script>
   
 
-    <p>O ZMEJELOVU </p>
+    <p>O zmejelovU </p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eligendi. Corporis omnis reprehenderit magni vero ipsa laborum error sunt, assumenda totam facilis, corrupti illum eligendi autem unde. Odit, dolores eos?
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sint aut delectus nemo voluptatem cumque architecto quam, soluta doloribus modi temporibus impedit reprehenderit iusto, officiis perspiciatis dolor exercitationem consequatur repudiandae?
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sint aut delectus nemo voluptatem cumque architecto quam, soluta doloribus modi temporibus impedit reprehenderit iusto, officiis perspiciatis dolor exercitationem consequatur repudiandae?

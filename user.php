@@ -7,9 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>zmejelov</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/zmejelov/CSS/index.css">
 <link rel="stylesheet" href="profileCSS.css">
 </head>
 <body>
@@ -125,7 +125,7 @@
           ?>
           </DIV>
           <div class="achievementsDisplayProfile">
-                <h2 >ZMEJELOV 1960 </h2>
+                <h2 >zmejelov 1960 </h2>
               <?php
               if ($achievements[6] === "1") {
                 echo '<div class="achievement-container">';

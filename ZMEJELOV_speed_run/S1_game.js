@@ -1,5 +1,5 @@
 const GAME_HEIGHT = 800
-const GAME_WIDTH = 1600
+const GAME_WIDTH = 1400
 var cursors;
 var isMute = false
 var slo = true   //jeziki
@@ -9,6 +9,31 @@ var muska = 1 //da ne ponavla muske vsakic ko gres na main
 var enkratt = 1 //ce je 1 je default, pomeni pa da odklenemo 2 easter egg na 4 nivoju
 var stSmrti = 0
 var deathVarient = ""
+
+function getLanguage() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+              var response = JSON.parse(xhr.responseText); // Parse JSON response
+              var language = response.language;
+              if (language === "en") {
+                slo = false;
+                usa = true;
+              } else {
+                slo = true;
+                usa = false;
+              }
+          } 
+      }
+  };
+  // Send a request to getLanguage.php to retrieve the selected language
+  xhr.open('GET', '/zmejelov/translations/getLanguage.php', true);
+  xhr.send();
+}
+getLanguage()
+
+
 
 
 const gameState = {
@@ -64,7 +89,7 @@ class getStuff {
     getPhpStuff() {
       return new Promise((resolve, reject) => {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/zmejelovTheFINAL/SERVER/getSessionData.php', true);
+        xhr.open('GET', '/zmejelov/SERVER/getSessionData.php', true);
         xhr.onload = function () {
           if (xhr.status >= 200 && xhr.status < 300) {
             var sessionData = JSON.parse(xhr.responseText);

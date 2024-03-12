@@ -23,7 +23,6 @@ class M2_inicial  extends M0_shared {
 
     
         if(verzija == 0){
-
             var zmentures = this.add.image(GAME_WIDTH/2,150,"zmentures");
             zmentures.setScale(.5)
         }

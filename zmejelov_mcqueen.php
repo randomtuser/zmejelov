@@ -17,19 +17,19 @@
   gtag('config', 'G-TH6M7HMG59');   
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="/zmejelov/CSS/index.css">
 
 
  <meta charset="utf-8"/>
      <title>Zmejelov</title>
      <script type="text/javascript" src = "Zmejelov_basic_game/phaser.min.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_mcqueen/M0_shared.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_mcqueen/M2_inicial.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_mcqueen/M3_storyIntro.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_mcqueen/M4_gamePlayStart.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_mcqueen/M5_konec.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_mcqueen/M4_deathScreen.js"></script>
-    <script type="text/javascript"src = "ZMEJELOV_mcqueen/M1_game.js"></script>
+    <script type="text/javascript"src = "zmejelov_mcqueen/M0_shared.js"></script>
+    <script type="text/javascript"src = "zmejelov_mcqueen/M2_inicial.js"></script>
+    <script type="text/javascript"src = "zmejelov_mcqueen/M3_storyIntro.js"></script>
+    <script type="text/javascript"src = "zmejelov_mcqueen/M4_gamePlayStart.js"></script>
+    <script type="text/javascript"src = "zmejelov_mcqueen/M5_konec.js"></script>
+    <script type="text/javascript"src = "zmejelov_mcqueen/M4_deathScreen.js"></script>
+    <script type="text/javascript"src = "zmejelov_mcqueen/M1_game.js"></script>
 
     <link rel="preload" as="font" href="assets\uvod\Cinzel-Regular.ttf" type="font/ttf" />
   </head>
@@ -45,7 +45,7 @@
     </script>
   
 
-    <p>O ZMEJELOVU </p>
+    <p>O zmejelovU </p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eligendi. Corporis omnis reprehenderit magni vero ipsa laborum error sunt, assumenda totam facilis, corrupti illum eligendi autem unde. Odit, dolores eos?
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sint aut delectus nemo voluptatem cumque architecto quam, soluta doloribus modi temporibus impedit reprehenderit iusto, officiis perspiciatis dolor exercitationem consequatur repudiandae?
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sint aut delectus nemo voluptatem cumque architecto quam, soluta doloribus modi temporibus impedit reprehenderit iusto, officiis perspiciatis dolor exercitationem consequatur repudiandae?

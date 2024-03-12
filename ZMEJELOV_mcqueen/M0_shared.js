@@ -160,7 +160,7 @@ setJumpingSpeed(speedNew){
  updateDataBase(data) {
 	return new Promise((resolve, reject) => {
 		var xhr = new XMLHttpRequest();	
-		xhr.open("POST", "/zmejelovTheFINAL/SERVER/resultUpdater.php", true);
+		xhr.open("POST", "/zmejelov/SERVER/resultUpdater.php", true);
 		xhr.setRequestHeader("Content-Type", "application/json");
 
 		xhr.onreadystatechange = function() {
@@ -182,7 +182,7 @@ setJumpingSpeed(speedNew){
 updateDataBaseAchivements(data) {
 	return new Promise((resolve, reject) => {
 		var xhr = new XMLHttpRequest();	
-		xhr.open("POST", "/zmejelovTheFINAL/SERVER/achivmentsUpdater.php", true);
+		xhr.open("POST", "/zmejelov/SERVER/achivmentsUpdater.php", true);
 		xhr.setRequestHeader("Content-Type", "application/json");
 
 		xhr.onreadystatechange = function() {

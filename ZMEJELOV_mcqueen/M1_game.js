@@ -1,5 +1,5 @@
 const GAME_HEIGHT = 800
-const GAME_WIDTH = 1600
+const GAME_WIDTH = 100
 var cursors;
 var isMute = false
 var slo = true   //jeziki
@@ -12,6 +12,33 @@ var generated = false
 const visina = 3000
 var heightPlatform = visina - 200 //kok visok je platforma, dinamicno spreminja
 var userCoins = 0 //load!!!!!!
+
+
+function getLanguage() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+              var response = JSON.parse(xhr.responseText); // Parse JSON response
+              var language = response.language;
+              if (language === "en") {
+                slo = false;
+                usa = true;
+              } else {
+                slo = true;
+                usa = false;
+              }
+          } 
+      }
+  };
+  // Send a request to getLanguage.php to retrieve the selected language
+  xhr.open('GET', '/zmejelov/translations/getLanguage.php', true);
+  xhr.send();
+}
+getLanguage()
+
+
+
 
 
 
@@ -55,7 +82,7 @@ class getStuff {
     getPhpStuff() {
       return new Promise((resolve, reject) => {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/zmejelovTheFINAL/SERVER/getSessionData.php', true);
+        xhr.open('GET', '/zmejelov/SERVER/getSessionData.php', true);
         xhr.onload = function () {
           if (xhr.status >= 200 && xhr.status < 300) {
             var sessionData = JSON.parse(xhr.responseText);

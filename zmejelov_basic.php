@@ -1,7 +1,9 @@
 <?php
   include("SERVER/database.php");
-  session_start();
-    
+  include ('translations/load_translations.php');
+  if (session_status() === PHP_SESSION_NONE) 
+   session_start();
+
 ?>
 
 
@@ -19,7 +21,7 @@
   gtag('config', 'G-TH6M7HMG59');   
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="/zmejelov/CSS/index.css">
 
 
  <meta charset="utf-8"/>
@@ -89,45 +91,41 @@
 
       });
     </script>
-   <h1>ZMENTURES</h1>
+    <h1>ZMENTURES</h1>
     <div  class="introduction" id="introduction_OG" >
-      <img src="assets/lvl2/Wraith_03_Idle_006.png" alt="Zmeja" class="zmeja" class="col-10">
-      <div class="introductionText" >
-        <p><b>ZMENTURES</b> je nadgrajena različica prvotne igre, ki je predstavljena z zgodbo. Za začetnike je 
-        igra kar težavna, tako da je implementiran kar nekaj pomoči. Igra avtomatsko shranjuje nivo na katerega si prišel, tako da lahko
-        kadarkoli prekineš in nadaljuješ, ko se ti ponovno pojavi želja po izzivih. DODAJ SE V ANG IN ZBRISI OSTALE JEZIKE  V IGRI OPIŠI TEŽAVNOSTI Kar čaka da raziščeš!</p>
-      </div>
-    </div>
+     <img src="assets/lvl2/Wraith_03_Idle_006.png" alt="Zmeja" class="zmeja" class="col-10">
+     <div class="introductionText" >
+      <p><b>ZMENTURES</b>    <?php  $translations = loadTranslations(); echo $translations['zmejelov_intro_OG'] ?></p>
+     </div>
     </div>
 
     <div class="game">
-      <div id="game_OG">
-        <?php if(isset($_SESSION["username"])): ?>
-          <div id="gameContainer"></div>
-        <?php else: ?>
-          <div class="gameContainerError" class="col-10">
-              <p>Za igranje se <a href="SERVER\login.php">prijavite</a> ali pa <a href="SERVER\register.php">registrirajte</a> </p>
-          </div>
-      <?php endif; ?>
-      </div>
+    <div id="game_OG">
+      <h1>IGRA</h1>
+      <?php if(isset($_SESSION["username"])): ?>
+        <div id="gameContainer"></div>
+      <?php else: ?>
+        <div class="gameContainerError" class="col-10">
+            <p><?php  $translations = loadTranslations(); echo $translations['please_login'] ?> </p>
+        </div>
+    <?php endif; ?>
+    </div>
     </div>
 
     <div class="QnA" class="col-10" id="QnA_OG">
-      <h1 >Q&N</h1>
-      <p class="question">Kako shranim napredek igre?</p>
-      <p class="answer">Napredek igre se shrani avtomatsko na vsakem nivoju GLEJ DA TO TUD IMPLEMENTIRAS</p>
-      <p class="question">KAJ NAREDITI, ČE IGRICA ZAGLIČA?</p>
-      <p class="answer">Ponovno naloži stran, v kolikor pa se težava pojava me kontaktiraj <a href="SHARED\contact.php">preko obrazca</a></p>
-      <p class="question">Zakaj se ob smrti ponovno pojavim na 4 nivoju?</p>
-      <p class="answer">Ker si umrl in kje so mrtvi ljudje? Na pokopališču! Šalo na stran, tam se pojavič, ker igraš na težki težavnosti, in ker nisi odkril skrivnega nivoja, ki ti omogoča uporabo "checkpoint"</p>
-      <p class="question">KAKO ODKLENEM DOSEŽKE?</p>
-      <p class="answer">Preberi <a href="#dosezki_OG">dosežke</a></p> 
+    <h1 >Q&N</h1>
+    <p class="question"> <?php  $translations = loadTranslations(); echo $translations['q1_OG'] ?></p>
+    <p class="answer"><?php  $translations = loadTranslations(); echo $translations['a1_OG'] ?></p>
+    <p class="question"> <?php  $translations = loadTranslations(); echo $translations['q2_OG'] ?></p>
+    <p class="answer"><?php  $translations = loadTranslations(); echo $translations['a2_OG'] ?></p>
+    <p class="question"><?php  $translations = loadTranslations(); echo $translations['q3_OG'] ?></p>
+    <p class="answer"><?php  $translations = loadTranslations(); echo $translations['a3_OG'] ?></p>
+    <p class="question"><?php  $translations = loadTranslations(); echo $translations['q4_OG'] ?></p>
+    <p class="answer"><?php  $translations = loadTranslations(); echo $translations['a4_OG'] ?></p> 
     </div>
-    <P>
-    
-  </P>
+
       
-  <div class="achievementsMainBlock" id="dosezki_OG">
+    <div class="achievementsMainBlock" id="dosezki_OG">
     <h1>DOSEŽKI</h1>
     <?php if(isset($_SESSION["username"])): ?>
     <div class="achievements">
@@ -168,7 +166,7 @@
               echo '<div class="achievementsNotLoggedIn">';
               echo '<p>DIE 50 TIMES IN ONE GAME</p>';
               echo '</div>';            } 
-           ?>
+            ?>
 
           <?php
             if ($_SESSION["achievements"][5] === "1") {
@@ -177,7 +175,7 @@
                 echo '              <p>WIN PLAYING EASY DIFICULTY</p>                  ';
                 echo    ' <p>stavim, da si tole opravim z zaprtimi očmi ;)</p>';
                 echo '</div>';}
-           else{
+            else{
             echo '<div class="achievementsNotLoggedIn">';
             echo '<p>WIN PLAYING EASY DIFICULTY</p>';
             echo '</div>';            } ?>
@@ -185,10 +183,10 @@
           <?php
             if ($_SESSION["achievements"][3] === "1") {
               echo "<div class='oneAchievements'>";
-                 echo '<img src="assets\achivments\zmejelov_clasic\8665817_store_shopping_icon.png"  alt="Achievement Picture 1">';
-                 echo '              <p>HELP PEOPLE IN TOWN</p>                  ';
+                  echo '<img src="assets\achivments\zmejelov_clasic\8665817_store_shopping_icon.png"  alt="Achievement Picture 1">';
+                  echo '              <p>HELP PEOPLE IN TOWN</p>                  ';
 
-                 echo    ' <p>kakšna dobra dušica si pa ti 🥺🥺🥺🥺</p>';
+                  echo    ' <p>kakšna dobra dušica si pa ti 🥺🥺🥺🥺</p>';
                 echo '</div>';}
             else{
               echo '<div class="achievementsNotLoggedIn">';
@@ -212,53 +210,76 @@
             } 
 
             ?>
-          </div>
-          <?php else: ?>
-        <div >
-            <p>Za odklenitev dosežkov se <a href="SERVER\login.php">prijavite</a> ali pa <a href="SERVER\register.php">registrirajte</a> </p>
-        </div>
-      <?php endif; ?>
-
-
-
-  <div  class="comments_DIV" id="comments_OG">
-      <?php if(isset($_SESSION["username"])): ?>  
-        <div class="commentsForm">
-        <h1>KOMENTARJI</h1>  
-          <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="GET"> 
-            <textarea name="addCommentZmejelov" id="addCommentZmejelov"   placeholder=" write your comment here"></textarea>
-          <div class="submitButtonClass">          <button type="submit" name="submitCommentZmejelov" id="submitCommentZmejelov" class="submitCommentButton">Post Comment</button></div>
-          </form>
-        </div>
-      <?php else: ?>
-        <div class="commentsFormError">
-            <h1>KOMENTARJI</h1>  
-            <p>Za komentiranje se <a href="SERVER\login.php">prijavite</a> ali pa <a href="SERVER\register.php">registrirajte</a> </p>
-        </div>
-      <?php endif; ?>
-      <div class="commentsZmejelov">
-        <?php 
-            $sql = "SELECT * FROM comments_zmejelov_classic";
-            $result = mysqli_query($conn, $sql);
-
-            
-            while ($row = mysqli_fetch_assoc($result))  {
-              echo '<div><span class="commentAuthor"><a href="user.php?user=' . urlencode($row["user"]) . '">' . $row["user"] . '</a> (' . $row["date"] . '):</span><span class="commentText"><br>' . $row["comment"] . '</div><br><br></span>';            }
-        ?>
-      </div>
     </div>
-     </div>
-  
+        <?php else: ?>
+    <div >
+            <p> </p>
+    </div>
+      <?php endif; ?>
+
+      <div class="comments_DIV" id="comments_OG">
+        <?php if(isset($_SESSION["username"])): ?>  
+            <div class="commentsForm">
+                <h1>KOMENTARJI</h1>  
+                <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="GET"> 
+                    <textarea name="addCommentZmejelov" id="addCommentZmejelov" placeholder=" write your comment here"></textarea>
+                    <div class="submitButtonClass">
+                        <button type="submit" name="submitCommentZmejelov" id="submitCommentZmejelov" class="submitCommentButton">Post Comment</button>
+                    </div>
+                </form>
+            </div>
+        <?php else: ?>
+            <div class="commentsFormError">
+                <h1>KOMENTARJI</h1>  
+                <p>Za komentiranje se <a href="SERVER\login.php">prijavite</a> ali pa <a href="SERVER\register.php">registrirajte</a> </p>
+            </div>
+        <?php endif; ?>
+
+        <div class="commentsZmejelov" id="commentsAnchor">
+            <?php 
+                $commentsPerPage = 5;
+                $page = isset($_GET['page']) ? $_GET['page'] : 1;
+                $offset = ($page - 1) * $commentsPerPage;
+                $sql = "SELECT * FROM comments_zmejelov_classic LIMIT $commentsPerPage OFFSET $offset";
+                $result = mysqli_query($conn, $sql);
+
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<div><span class="commentAuthor"><a href="user.php?user=' . urlencode($row["user"]) . '">' . $row["user"] . '</a> (' . $row["date"] . '):</span><span class="commentText"><br>' . $row["comment"] . '</div><br><br></span>';
+                }
+
+                $sqlCount = "SELECT COUNT(*) AS total_comments FROM comments_zmejelov_classic";
+                $resultCount = mysqli_query($conn, $sqlCount);
+                $rowCount = mysqli_fetch_assoc($resultCount);
+                $totalComments = $rowCount['total_comments'];
+
+                $totalPages = ceil($totalComments / $commentsPerPage);
+                
+                echo '<div class="pagination">';
+                for ($i = 1; $i <= $totalPages; $i++) {
+                  echo '<a href="?page=' . $i . '#commentsAnchor">' . $i . '</a> ';                }
+                echo '</div>';
+            ?>
+        </div>
+    </div>
+
+
+
+
+
+    </div>
+
+
+
     <div id="footer"></div>
-  </body>
-  
-
-
-</html>
+    </body>
 
 
 
-<?php
+    </html>
+
+
+
+    <?php
     if(isset($_GET["submitCommentZmejelov"])){
       echo "gsdf";
       if(isset($_GET["addCommentZmejelov"])){

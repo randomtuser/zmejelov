@@ -41,7 +41,7 @@ class konec extends Phaser.Scene {
 	updateDataBaseAchivements(data) {
 		return new Promise((resolve, reject) => {
 			var xhr = new XMLHttpRequest();	
-			xhr.open("POST", "/zmejelovTheFINAL/SERVER/achivmentsUpdater.php", true);
+			xhr.open("POST", "/zmejelov/SERVER/achivmentsUpdater.php", true);
 			xhr.setRequestHeader("Content-Type", "application/json");
 
 			xhr.onreadystatechange = function() {

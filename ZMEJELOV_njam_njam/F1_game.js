@@ -57,7 +57,7 @@ class getStuff {
     getPhpStuff() {
       return new Promise((resolve, reject) => {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/zmejelovTheFINAL/SERVER/getSessionData.php', true);
+        xhr.open('GET', '/zmejelov/SERVER/getSessionData.php', true);
         xhr.onload = function () {
           if (xhr.status >= 200 && xhr.status < 300) {
             var sessionData = JSON.parse(xhr.responseText);

@@ -7,11 +7,42 @@ var stSmrti = 0
 var stZivljenj = 0
 
 
-var zaprto = true  //zapre vhod jame
+var zaprto = true;  //zapre vhod jame
 
-var slo = true   //jeziki
-var usa = false
-var rus = false
+
+// Languages
+var usa = false;
+var rus = false;
+var slo = false;
+
+
+function getLanguage() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+              var response = JSON.parse(xhr.responseText); // Parse JSON response
+              var language = response.language;
+              console.log(language)
+              if (language === "en") {
+                slo = false;
+                usa = true;
+              } else {
+                slo = true;
+                usa = false;
+              }
+          } 
+      }
+  };
+  // Send a request to getLanguage.php to retrieve the selected language
+  xhr.open('GET', '/zmejelov/translations/getLanguage.php', true);
+  xhr.send();
+}
+getLanguage()
+
+
+
+
 
 var easy = true  //gamemode
 
@@ -108,7 +139,7 @@ class getStuff {
   getPhpStuff() {
     return new Promise((resolve, reject) => {
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', '/zmejelovTheFINAL/SERVER/getSessionData.php', true);
+      xhr.open('GET', '/zmejelov/SERVER/getSessionData.php', true);
       xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
           var sessionData = JSON.parse(xhr.responseText);

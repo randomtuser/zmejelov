@@ -132,7 +132,7 @@ save(_scene, _dificulty){
 updateDataBase(data) {
         return new Promise((resolve, reject) => {
             var xhr = new XMLHttpRequest();	
-            xhr.open("POST", "/zmejelovTheFINAL/SERVER/DatabaseUpdater.php", true);
+            xhr.open("POST", "/zmejelov/SERVER/DatabaseUpdater.php", true);
             xhr.setRequestHeader("Content-Type", "application/json");
 
             xhr.onreadystatechange = function() {
@@ -154,7 +154,7 @@ updateDataBase(data) {
 updateDataBaseAchivements(data) {
 	return new Promise((resolve, reject) => {
 		var xhr = new XMLHttpRequest();	
-		xhr.open("POST", "/zmejelovTheFINAL/SERVER/achivmentsUpdater.php", true);
+		xhr.open("POST", "/zmejelov/SERVER/achivmentsUpdater.php", true);
 		xhr.setRequestHeader("Content-Type", "application/json");
 
 		xhr.onreadystatechange = function() {

@@ -4,6 +4,14 @@ body {
   margin: 0
 }
 
+@media screen and (max-width: 1200px) {
+  .game{
+    visibility: hidden;
+  }
+}
+.gameParagraph{
+  
+}
 
 @keyframes animationIntro {
     0%   { left:  1%;}
@@ -50,8 +58,10 @@ body {
 }
 
 .introduction{
-  margin: 0% 0% 20% 0%;
   display: flex; 
+  background-color: gray;
+  background-color: red;
+
 }
 
 #options{
@@ -63,8 +73,9 @@ body {
 .introductionText{
   color:  black;
   font-size: 30px;
-  margin-top: 2%;
-  margin-right: 2%;
+  margin-top: -5%;
+  margin-left: 50px;
+  background-color: rebeccapurple;
 }
 
 .fade {
@@ -84,18 +95,31 @@ body {
 }
 
 .pictureSlider img{
-  max-width: 80%;
+  max-width: 90%;
   display: block; /* Ensures the image is treated as a block element */
   margin: 0 auto; /* Centers the image horizontally */
 }
 
+.pictureSliderVideo {
+  overflow: hidden; 
+  margin: 0px 100px  0px 100px;
+}
+
+.pictureSliderVideo iframe {
+  float: left; 
+  margin-right: 20px; 
+}
+
+.pictureSliderVideo .text {
+  overflow: hidden;
+}
+
 
 #introduction_FrontPage{
-  display: flex;  
+  display: flex ;  
 }
-#introduction_OG{
-  margin: -5% 0% 5% 0%;
-}
+
+
 
 b, h1{
   color: #4d1451;
@@ -107,6 +131,14 @@ b, h1{
   text-align: center;
 
 }
+
+.QnA_split{
+  display: center;
+  text-align: center;
+
+}
+
+
 .question{
   color: #000;
   font-weight: bold;
@@ -309,9 +341,18 @@ h1{
   margin-bottom: 2%;
 }
 
+#speed_running_split {
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Distribute items along the main axis */
+}
 
+.QnA {
+  flex: 0 0 70%; /* Take up 70% of the available space */
+}
 
-
+#leaderboard {
+  flex: 0 0 25%; /* Take up 25% of the available space */
+}
 
 .game,.achievementsMainBlock{
   background-color: hsl(270, 11%, 30%);
@@ -391,3 +432,12 @@ p: nth-child(2)
   width: 600px;
   text-align: center;
 }
+
+
+
+@media screen and (min-width: 3500px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+

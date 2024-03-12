@@ -9,9 +9,6 @@
             this.load.image("zmentures","assets/uvod/Screenshot 2023-01-27 at 16-50-18 Untitled-11.pdf.png")
             this.load.image("rage","assets/uvod/rage.png")
             this.load.image("basic","assets/uvod/basic.png")
-            this.load.image("usa","assets/uvod/United_States.jpg")
-            this.load.image("rus","assets/uvod/Russia.jpg")
-            this.load.image("slo","assets/uvod/Slovenia.jpg")
             this.load.image("gumb2","assets/uvod/gumbVeliki.png")
             this.load.image("mute","assets/uvod/mute.png")
             this.load.image("unmute","assets/uvod/umute.png")
@@ -141,33 +138,7 @@
 
         var razmak = 50
         var y = GAME_HEIGHT-20
-        this.slo = this.add.sprite(25+razmak+razmak, y, 'slo').setInteractive();
-        this.slo.setScale(.5)
-        this.slo.on('pointerup', () => {
-            slo = true
-            rus = false
-            usa = false
-            this.scene.restart();
-        })
-            
-        this.usa = this.add.sprite(20+razmak, y, 'usa').setInteractive();
-        this.usa.setScale(.5)
-        this.usa.on('pointerup', () => {
-            slo = false
-            rus = false
-            usa = true
-            this.scene.restart();
-        })
-    
-        this.rus = this.add.sprite(20, y, 'rus').setInteractive();
-        this.rus.setScale(.45)
-        this.rus.on('pointerup', () => {
-            slo = false
-            rus = true
-            usa = false
-            this.scene.restart();
-           
-        })
+        
 
         
         
