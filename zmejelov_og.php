@@ -1,4 +1,6 @@
 <?php
+  include ('translations/load_translations.php');
+
   include("SERVER/database.php");
   session_start();
     
@@ -55,11 +57,8 @@
     <div  class="introduction" id="introduction_OG" >
       <img src="assets/lvl2/Wraith_03_Idle_006.png" alt="Zmeja" class="zmeja" class="col-10">
       <div class="introductionText" >
-        <h1>zmejelov 1960</h1>
-        <p><b>zmejelov 1960</b> je prvotna verzija aplikacije zasnovana v davnem 2021 letu. Danes je na voljo v svoji originali formi, 
-        edina dodana stvar k igri je en dosežek, ki ga lahko dosežeš. Kljub temu, da je igra za izkušene igralce zelo hitra in enostavna, lahko na 
-        začetku novim igralcem ponuja malo preglavic, tako da, v primeru težav, ne obupati z igranjem. Igra je primerna tudi za vse "OG", ki želijo podoživeti
-        nostalgijo igranja prvotne verzije!</p>
+        <h1>ZMEJELOV 1869</h1>
+        <p><b>ZMEJELOV 1869</b> <?php  $translations = loadTranslations(); echo $translations["zmejelov_1960"] ?></p>
       </div>
     </div>
     </div>
@@ -67,11 +66,11 @@
     <div class="game">
       <div id="game_OG">
         <?php if(isset($_SESSION["username"])): ?>
-          <h1>IGRA</h1>
+          <h1><?php  $translations = loadTranslations(); echo $translations["game"] ?></h1>
           <div id="gameContainer"></div>
         <?php else: ?>
           <div class="gameContainerError" class="col-10">
-              <p>Za igranje se <a href="SERVER\login.php">prijavite</a> ali pa <a href="SERVER\register.php">registrirajte</a> </p> 
+              <p><?php  $translations = loadTranslations(); echo $translations["please_login"] ?> </p> 
             </div>
       <?php endif; ?>
       </div>
@@ -79,17 +78,18 @@
 
     <div class="QnA" class="col-10" id="QnA_OG">
       <h1 >Q&N</h1>
-      <p class="question">ZAKAJ JE TA IGRA TAKO ENOSTAVNA?</p>
-      <p class="answer">Mogoče si pa ti tako dober 😉</p>
-      <p class="question">KAJ NAREDITI, ČE IGRICA ZAGLIČA?</p>
-      <p class="answer">Ponovno naloži stran, v kolikor pa se težava pojava me kontaktiraj <a href="SHARED\contact.php">preko obrazca</a></p>
-      <p class="question">KAKO ODKLENEM DOSEŽKE?</p>
-      <p class="answer">Preberi <a href="#dosezki_OG">dosežke</a></p>
+      <p class="question"> <?php  $translations = loadTranslations(); echo $translations['q1_OG'] ?></p>
+    <p class="answer"><?php  $translations = loadTranslations(); echo $translations['a1_OG'] ?></p>
+    <p class="question"> <?php  $translations = loadTranslations(); echo $translations['q2_OG'] ?></p>
+    <p class="answer"><?php  $translations = loadTranslations(); echo $translations['a2_OG'] ?></p>
+    <p class="question"><?php  $translations = loadTranslations(); echo $translations['q4_OG'] ?></p>
+    <p class="answer"><?php  $translations = loadTranslations(); echo $translations['a2_1960'] ?></p>
+
 
     </div>
   
     <div class="achievementsMainBlock" id="dosezki_OG">
-    <h1>DOSEŽKI</h1>
+    <h1><?php  $translations = loadTranslations(); echo $translations['achivements'] ?></h1>
       <?php if(isset($_SESSION["username"])): ?>
         <?php
         if ($_SESSION["achievements"][12] === "1") {
@@ -106,7 +106,7 @@
        </div>
       <?php else: ?>
         <div >
-            <p>Za odklenitev dosežkov se <a href="SERVER\login.php">prijavite</a> ali pa <a href="SERVER\register.php">registrirajte</a> </p>
+            <p><?php  $translations = loadTranslations(); echo $translations['please_login_achivements'] ?></p>
         </div>
       <?php endif; ?>
 
@@ -115,17 +115,17 @@
     <div class="comments_DIV">
       <?php if(isset($_SESSION["username"])): ?>  
         <div class="commentsForm">
-        <h1>KOMENTARJI</h1>  
+        <h1><?php  $translations = loadTranslations(); echo $translations['KOMENTARJI'] ?></h1>  
           <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="GET"> 
-            <textarea name="addCommentZmejelov" id="addCommentZmejelov"   placeholder=" write your comment here"></textarea>
-          <div class="submitButtonClass">          <button type="submit" name="submitCommentZmejelov" id="submitCommentZmejelov" class="submitCommentButton">Post Comment</button></div>
+            <textarea name="addCommentZmejelov" id="addCommentZmejelov"   placeholder=<?php  $translations = loadTranslations(); echo $translations["write_comment"] ?>></textarea>
+          <div class="submitButtonClass">          <button type="submit" name="submitCommentZmejelov" id="submitCommentZmejelov" class="submitCommentButton"><?php  $translations = loadTranslations(); echo $translations["add_comment"] ?></button></div>
           </form>
         </div>
       <?php else: ?>
         <div class="commentsFormError">
-            <h1>KOMENTARJI</h1>  
-            <p>Za komentiranje se <a href="SERVER\login.php">prijavite</a> ali pa <a href="SERVER\register.php">registrirajte</a> </p>
-        </div>
+            <h1><?php  $translations = loadTranslations(); echo $translations['KOMENTARJI'] ?></h1>  
+            <p><?php  $translations = loadTranslations(); echo $translations["please_login_comments"] ?> </p>
+          </div>
       <?php endif; ?>
       <div class="commentsZmejelov">
         <?php 

@@ -1,12 +1,13 @@
 <?php
     session_start();
+    include ('translations/load_translations.php');
 
 ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zmejelov</title>
+    <title>ZMEJELOV</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/zmejelov/CSS/index.css">
 
@@ -27,22 +28,21 @@
       <img src="assets/lvl2/Wraith_03_Idle_006.png" alt="Zmeja" class="zmeja" class="col-10">
       <div class="introductionText" >
       <?php if(isset($_SESSION["username"])):?>
-            <p >Še enkrat pozdravljeni na zmejelov IGRALNI PLATFORMI. Moje ime je Zmeja in moram priznati, da sem zelo vesela,
-                 da te vidim! Na portalu je 5 iger: <ul id="options">
+            <p ><?php  $translations = loadTranslations(); echo $translations['welcome_again'] ?> <ul id="options">
                     <li ><a href="zmejelov_basic.php">ZMENTURES</a></li>
                     <li><a href="zmejelov_og.php">zmejelov 1960</a></li>
                     <li><a href="zmejelov_njam_njam.php">HUNGRY FEST</a></li>
                     <li><a href="zmejelov_speed_run.php">CRA*KELOV</a></li>
                     <li><a href=""></a></li></ul> 
-                 Če mene vprašaš moraš preigrati vse xd. Veselo igranje. </p>
+                   <?php  $translations = loadTranslations(); echo $translations['welcome_again2'] ?> <ul id="options"></p>
         <?php else:?>
-            <p >Naj poudarim, da sem zelo vesela, da te vidim! Na portalu je 5 iger za veliko ur igranja, z dosežki pa te spodbujam k igranju. Če mene vprašaš moraš preigrati vse xd. Za njihovo uporabo pa se moraš registrirati s klikom <a href="SERVER\register.php">tukaj</a> ali pa prijaviti s klikom <a href="SERVER\login.php">tukaj</a>. Veselo igranje. </p>
+            <p> <?php  $translations = loadTranslations(); echo $translations['welcome_again3'] ?> <ul id="options"></p>
             <?php endif; ?>
       </div>
     </div>
     </div>
 
-
+    
 
            
     
@@ -95,7 +95,7 @@
 
 
     <div id="about_proyect">
-        <h1>»RAČUNALNIK NE DELA NAPAK, PREPROSTO IZVRŠUJE TO, KAR MU UKAŽEMO«</h1>
+        <h1><?php  $translations = loadTranslations(); echo $translations['intro_essay'] ?></h1>
         <div class="pictureSlider fade">
             <img src="assets/uvod/Screenshot 2023-01-27 at 16-50-18 Untitled-11.pdf.png" alt="zmentures">
         </div>
@@ -104,6 +104,9 @@
         </div>
         <div class="pictureSlider fade">
             <img src="assets/uvod/basic.png" alt="zmejelov">
+        </div>
+        <div class="pictureSlider fade">
+            <img src=">assets/PROMO/keepOn.png.png" alt="zmejelov keep on">
         </div>
         <script>
             let slideIndex = 0;
@@ -119,7 +122,7 @@
             slideIndex++;
               
            
-            setTimeout(showSlides, 3500); // Change image every 2 seconds
+            setTimeout(showSlides, 3500); 
             }
         </script>
 
@@ -143,7 +146,7 @@
     </div>
 
             <div>
-                <p>Odprto kodni projekt, vsa koda na voljo na <a href="https://github.com/randomtuser/zmejelov">githubu</a></p>
+                <p><?php  $translations = loadTranslations(); echo $translations['github_essay'] ?></p>
             </div>
   
     <div id="footer"></div>

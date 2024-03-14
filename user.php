@@ -10,7 +10,7 @@
     <title>zmejelov</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/zmejelov/CSS/index.css">
-<link rel="stylesheet" href="profileCSS.css">
+<link rel="stylesheet" href="/zmejelov/CSS/profileCSS.css">
 </head>
 <body>
     <script>

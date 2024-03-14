@@ -6,12 +6,19 @@ if (session_status() === PHP_SESSION_NONE)
 function loadTranslations() {
     
     // Construct the file path relative to the directory of the PHP script
-    $filePath = dirname(__FILE__) . '/translations.json';
 
     // Read the JSON file
-    $translationsJson = file_get_contents($filePath);
 
     $lang = isset($_SESSION['selectedLanguage']) ? $_SESSION['selectedLanguage'] : 'slo';
+
+    if($lang == "en")
+        $filePath = dirname(__FILE__) . '/translationsEN.json';
+    else
+        $filePath = dirname(__FILE__) . '/translationsSLO.json';
+
+
+    $translationsJson = file_get_contents($filePath);
+
 
     // Decode JSON into PHP associative array
     $translations = json_decode($translationsJson, true);

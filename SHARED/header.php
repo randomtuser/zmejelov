@@ -36,7 +36,7 @@
 
   .sidenav a:hover {
     color: #4d1451;
-    transition:  0.5s; 
+    transition:  0.65s; 
 
 
   }

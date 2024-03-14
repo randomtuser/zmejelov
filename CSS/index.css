@@ -342,16 +342,16 @@ h1{
 }
 
 #speed_running_split {
-  display: flex; /* Use flexbox */
-  justify-content: space-between; /* Distribute items along the main axis */
+  display: flex; 
+  justify-content: space-between; 
 }
 
-.QnA {
-  flex: 0 0 70%; /* Take up 70% of the available space */
+#speed_running_split .QnA {
+  flex: 0 0 70%; 
 }
 
-#leaderboard {
-  flex: 0 0 25%; /* Take up 25% of the available space */
+#speed_running_split .leaderBoardSpeedRun {
+  flex: 0 0 30%;
 }
 
 .game,.achievementsMainBlock{
