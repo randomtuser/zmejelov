@@ -47,6 +47,8 @@ class S4_gamePlayStart extends S0_shared {
     this.load.image("c9" ,"assets/a_speedRunning/clouds/c9.png")
     this.load.image("c10" ,"assets/a_speedRunning/clouds/c10.png")
     this.load.image("c11" ,"assets/a_speedRunning/clouds/c11.png")
+    this.load.image("b1" ,"assets/a_speedRunning/clouds/Starfield_03-1024x1024.png")
+  
 
 
     this.load.image("reaper" ,"assets/a_speedRunning/0_Reaper_Man_Idle_000.png")
@@ -82,11 +84,13 @@ class S4_gamePlayStart extends S0_shared {
    // Create a graphics object
     const upperScreen = this.add.graphics();
     const lowerScreen = this.add.graphics();
+    var upperScreenImage = this.add.sprite(0, 0, 'b1');
 
-    // Fill the graphics object with the desired color
+    var b1 = this.add.image(0, 0, "b1").setOrigin(0, 0);
+    b1.displayWidth = dolzina;
+    b1.displayHeight = visina / 2;
+    
 
-    upperScreen.fillStyle(0x0000); 
-    upperScreen.fillRect(0, 0, dolzina, visina/2);
     lowerScreen.fillStyle(0x87CEEB); 
     lowerScreen.fillRect(0, visina/2, dolzina, visina);
     this.cameras.main.setBounds(0,0,dolzina,visina)
@@ -106,8 +110,8 @@ class S4_gamePlayStart extends S0_shared {
     boaster.setScale(0.8)
     gameState.spaceship =  this.physics.add.sprite(dolzina-200,visina -400, "spaceship")
     gameState.spaceship.body.allowGravity = false; 
-    gameState.junak  = this.physics.add.sprite(dolzina-6000, visina-4000, "Zmeja")
-    //gameState.junak  = this.physics.add.sprite(dolzina-200,    visina-400, "Zmeja")
+   // gameState.junak  = this.physics.add.sprite(dolzina-6000, visina-4000, "Zmeja")
+    gameState.junak  = this.physics.add.sprite(dolzina-200,    visina-400, "Zmeja")
 
     gameState.junak.setScale(.40)// pomanjsa
 	this.cameras.main.startFollow(gameState.junak)
@@ -362,14 +366,23 @@ class S4_gamePlayStart extends S0_shared {
        
 
   
-  
+        var spaceKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+
+        spaceKey.on('down', function(event) {
+            console.log(gameState.junak.x +" "+ gameState.junak.y)
+        });
   }
   
   update(){
    // console.log(gameState.junak.x +" "+ gameState.junak.y)
 
+
+
     const platforms = this.physics.add.staticGroup();
 
+    if(gameState.vulture.x >=  dolzina){
+        krog = false
+    }
     //vulture1
     if(gameState.vulture.x >=  dolzina){
         krog = false

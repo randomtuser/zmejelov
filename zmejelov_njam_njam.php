@@ -174,6 +174,8 @@
 
 
 
+</script>
+
 <?php
     if(isset($_GET["submitCommentZmejelov"])){
       echo "gsdf";

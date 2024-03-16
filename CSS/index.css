@@ -59,8 +59,7 @@ body {
 
 .introduction{
   display: flex; 
-  background-color: gray;
-  background-color: red;
+  margin-top: -50px;
 
 }
 
@@ -73,9 +72,7 @@ body {
 .introductionText{
   color:  black;
   font-size: 30px;
-  margin-top: -5%;
   margin-left: 50px;
-  background-color: rebeccapurple;
 }
 
 .fade {
@@ -127,7 +124,6 @@ b, h1{
 
 .QnA{
   display: center;
-  margin: 5% 0% 5% 0%;
   text-align: center;
 
 }
@@ -135,8 +131,16 @@ b, h1{
 .QnA_split{
   display: center;
   text-align: center;
+  margin: 0 auto;
+}
+
+.answer-visible {
+  display: block;
+  padding: -200px 0 0 0;
+  background-color: red;
 
 }
+
 
 
 .question{
@@ -147,10 +151,63 @@ b, h1{
   padding: 2%;
 }
 
-.answer{
-  font-size: 25px;
+
+
+.dropbtn {
+  background-color: gray;
+  color: white;
+  padding: 15px 30px 15px 30px;
+
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: rgb(191, 184, 184);
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.show {display: block;}
+
+.QN_field {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: hsl(270, 7%, 32%);
+  padding: 0px 100px 0px 100px;
+  box-sizing: border-box; /* Add this line */
+}
+
+.question_field {
+  flex: 1; 
+
 
 }
+
+.button_field {
+  align-items: center;
+  padding-right: 50px;
+}
+
 
 a{
   text-decoration: none;
@@ -165,6 +222,7 @@ h1{
 
 #zmejaIntro{
   scale: 1.5;
+
 }
 
 #animationIntro {
@@ -190,11 +248,13 @@ h1{
 }
 
 
-
 .submitButtonClass{
-  margin: 1%  0%  1%  0%;
-
+  display: flex;
+  justify-content: center; /* Aligns items horizontally */
+  align-items: center;
 }
+
+
 
 .submitCommentButton{
   background-color: #4d1451;
@@ -205,8 +265,9 @@ h1{
   color: black ;
   font-size:  25PX;
   text-align: center; 
+  margin-left: 100px;
   text-decoration: none;
-  margin: 1% 0% 2% 0%;
+  
 }
 
 .submitCommentButton:hover{
@@ -266,7 +327,6 @@ h1{
 .gameContainerError{
   display: center;
   margin: 10%;
-  border: 2px solid red;
   text-align: center;
 
 }
@@ -279,6 +339,14 @@ h1{
 }
 
 
+.commentsForm{
+  display: flex;
+  text-align: center;
+  margin-left: 150px;
+  margin-bottom: 150px;
+
+  
+}
 
 
 .oneAchievements img {
@@ -347,12 +415,14 @@ h1{
 }
 
 #speed_running_split .QnA {
-  flex: 0 0 70%; 
+  flex: 0 0 65%; 
 }
 
 #speed_running_split .leaderBoardSpeedRun {
-  flex: 0 0 30%;
+  flex: 0 0 35%;
+
 }
+
 
 .game,.achievementsMainBlock{
   background-color: hsl(270, 11%, 30%);

@@ -91,7 +91,7 @@ class S0_shared extends Phaser.Scene {
 update(arg) {
 	if (arg == "basic"){
 	if (gameState.active) {
-		if ((gameState.cursors.up.isDown) && gameState.junak.body.touching.down) {
+		if ((gameState.cursors.up.isDown) /*&& gameState.junak.body.touching.down*/) {
 			gameState.junak.anims.play('skok', true);
 			gameState.junak.setVelocityY(this.getJumpingSpeed())}
 		else if(gameState.cursors.right.isDown) {

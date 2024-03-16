@@ -77,17 +77,57 @@ include('translations/load_translations.php');
   <div id=speed_running_split>
     <div class="QnA_split" class="col-10" id="QnA_OG">
       <h1>Q&N</h1>
-      <p class="question">Kako shranim napredek igre?</p>
-      <p class="answer">Napredek igre se shrani avtomatsko na vsakem nivoju GLEJ DA TO TUD IMPLEMENTIRAS</p>
-      <p class="question">KAJ NAREDITI, ČE IGRICA ZAGLIČA?</p>
-      <p class="answer">Ponovno naloži stran, v kolikor pa se težava pojava me kontaktiraj <a href="SHARED\contact.php">preko obrazca</a></p>
-      <p class="question">Zakaj se ob smrti ponovno pojavim na 4 nivoju?</p>
-      <p class="answer">Ker si umrl in kje so mrtvi ljudje? Na pokopališču! Šalo na stran, tam se pojavič, ker igraš na težki težavnosti, in ker nisi odkril skrivnega nivoja, ki ti omogoča uporabo "checkpoint"</p>
-      <p class="question">KAKO ODKLENEM DOSEŽKE?</p>
-      <p class="answer">Preberi <a href="#dosezki_OG">dosežke</a></p>
+      <div>
+        <div class="QN_field">
+            <div class="question_field"><p>Kako shranim napredek igre?</p></div>
+            <div class="button_field"><button class="dropbtn" onclick="toggleAnswerVisibility('a1s')">&#9660;</button></div>
+          </div>
+          <div id="a1s" style="display: none;"> 
+            <p >Napredek igre se shrani avtomatsko na vsakem nivoju GLEJ DA TO TUD IMPLEMENTIRAS</p>
+          </div>
+      </div>
+        
+
+      <div>
+        <div class="QN_field">
+            <div class="question_field">      <p class="question">KAJ NAREDITI, ČE IGRICA ZAGLIČA?</p></div>
+            <div class="button_field"><button class="dropbtn" onclick="toggleAnswerVisibility('a2s')">&#9660;</button></div>
+          </div>
+          <div id="a2s" style="display: none;"> 
+            <p >Ponovno naloži stran, v kolikor pa se težava pojava me kontaktiraj <a href="SHARED\contact.php">preko obrazca</a></p>
+          </div>
+      </div>
+      
+      
+      <div>
+        <div class="QN_field">
+            <div class="question_field">      <p class="question">KAJ NAREDITI, ČE IGRICA ZAGLIČA?</p></div>
+            <div class="button_field"><button class="dropbtn" onclick="toggleAnswerVisibility('a3s')">&#9660;</button></div>
+          </div>
+          <div id="a3s" style="display: none;"> 
+            <p >Ponovno naloži stran, v kolikor pa se težava pojava me kontaktiraj <a href="SHARED\contact.php">preko obrazca</a></p>
+          </div>
+      </div>
+      
+
     </div>
 
-    <div id="leaderboard" class="leaderboard">
+    <script>
+      function toggleAnswerVisibility(id) {
+  var myEle = document.getElementById(id);
+  if (myEle.style.display === "none") {
+    myEle.style.display = "inline";
+    myEle.classList.add("answer-visible"); // Add the CSS class
+  } else {
+    myEle.style.display = "none";
+    myEle.classList.remove("answer-visible"); // Remove the CSS class
+  }
+}
+
+    </script>
+
+
+    <div id="leaderboard" class="leaderBoardSpeedRun">
       <h1>LEADERBOARD</h1>
       <div style="text-align: center;">
         <?php
@@ -156,8 +196,6 @@ include('translations/load_translations.php');
         }
         echo '</div>';
 
-        // Close the database connection
-        mysqli_close($conn);
         ?>
       </div>
 
@@ -201,7 +239,7 @@ include('translations/load_translations.php');
           echo "<div class='oneAchievements'>";
           echo '<img src="assets\achivments\zmejelov_clasic\9035826_earth_sharp_icon.png"  alt="Achievement Picture 1">';
           echo '<p>' . $translations["ach3_speed"] . '</p>';
-          echo '<p>' . $translations["ach3.3_speed.6"] . '</p>';
+          echo '<p>' . $translations["ach3.3_speed"] . '</p>';
           echo '</div>';
         } else {
           echo '<div class="achievementsNotLoggedIn">';
@@ -215,7 +253,7 @@ include('translations/load_translations.php');
           echo "<div class='oneAchievements'>";
           echo '<img src="assets\achivments\zmejelov_clasic\9035826_earth_sharp_icon.png"  alt="Achievement Picture 1">';
           echo '<p>' . $translations["ach4_speed"] . '</p>';
-          echo '<p>' . $translations["ach4.4_speed.6"] . '</p>';
+          echo '<p>' . $translations["ach4.4_speed"] . '</p>';
           echo '</div>';
         } else {
           echo '<div class="achievementsNotLoggedIn">';
@@ -262,15 +300,17 @@ include('translations/load_translations.php');
 
       <div class="comments_DIV" id="comments_OG">
         <?php if (isset($_SESSION["username"])) : ?>
-          <div class="commentsForm">
             <h1><?php $translations = loadTranslations();
                 echo $translations["KOMENTARJI"] ?></h1>
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
-              <textarea name="addCommentZmejelov" id="addCommentZmejelov" placeholder="<?php $translations = loadTranslations();
-                                                                                        echo $translations["write_comment"]; ?>"></textarea>
-              <div class="submitButtonClass"> <button type="submit" name="submitCommentZmejelov" id="submitCommentZmejelov" class="submitCommentButton">Post Comment</button></div>
-            </form>
-          </div>
+                <div  >
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET" class="commentsForm">
+        <textarea name="addCommentZmejelov" id="addCommentZmejelov" placeholder="<?php $translations = loadTranslations(); echo $translations["write_comment"]; ?>"></textarea>
+        <div class="submitButtonClass"><button type="submit" name="submitCommentZmejelov" id="submitCommentZmejelov" class="submitCommentButton">Post Comment</button>
+        </div>
+      </form>
+</div>
+
+
         <?php else : ?>
           <div class="commentsFormError">
             <h1><?php $translations = loadTranslations();
